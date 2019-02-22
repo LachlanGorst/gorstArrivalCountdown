@@ -11,6 +11,7 @@
         Arrival<br />Countdown
       </h1>
       <div id="clock"></div>
+      <h2 class="here hidden">Here bitch</h2>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
@@ -31,6 +32,24 @@
           )
         );
       });
+      setInterval(() => {
+        let d = new Date();
+        let n = d.toString();
+        let dSplit = n.split(' ');
+        let broken = dSplit[4].split(':');
+        let numForm = parseInt(broken[1]);
+        let seconds = parseInt(broken[2]);
+        if (numForm > 53) {
+          console.log('works');
+          let here = document.querySelector('.here');
+          here.classList.remove('hidden');
+          if (seconds % 2 === 0) {
+            here.style.color = '#0078d8';
+          } else {
+            here.style.color = '#fff';
+          }
+        }
+      }, 1000);
     </script>
   </body>
 </html>

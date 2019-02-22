@@ -21,6 +21,7 @@ h1 {
 h1 span {
   font-size: 4em;
   line-height: 0.8em;
+  color: #0078d8;
 }
 #clock {
   display: flex;
@@ -43,7 +44,7 @@ h1 span {
   line-height: 3rem;
 }
 #clock div:last-child {
-  background: #e91e63;
+  background: #0078d8;
 }
 #clock div:before {
   content: '';
@@ -64,6 +65,16 @@ h1 span {
   margin-top: -10px;
 }
 
+.here {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 5em;
+  opacity: 100;
+}
+.hidden {
+  opacity: 0;
+}
+
 @media only screen and (max-width: 1000px) {
   h1 {
     font-size: 1em;
@@ -72,6 +83,6 @@ h1 span {
     font-size: 20px;
   }
   #clock {
-    width: 350px;
+    width: 400px;
   }
 }
