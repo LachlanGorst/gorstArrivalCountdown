@@ -39,7 +39,7 @@
         let broken = dSplit[4].split(':');
         let numForm = parseInt(broken[1]);
         let seconds = parseInt(broken[2]);
-        if (numForm > 58) {
+        
           console.log('works');
           let here = document.querySelector('.here');
           here.classList.remove('hidden');
@@ -48,7 +48,6 @@
           } else {
             here.style.color = '#fff';
           }
-        }
       }, 1000);
     </script>
   </body>
